@@ -1,0 +1,20 @@
+{
+  "name": "awesome_books",
+  "version": "1.0.0",
+  "description": "\"Awesome books\" is a simple website that displays a list of books and allows you to add and remove books from that list.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prisca-tech/AWESOME_BOOKS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prisca-tech/AWESOME_BOOKS/issues"
+  },
+  "homepage": "https://github.com/Prisca-tech/AWESOME_BOOKS#readme"
+}

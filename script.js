@@ -28,10 +28,6 @@ function updateBookListDisplay() {
   });
 }
 
-function displayBooks() {
-  updateBookListDisplay();
-}
-
 function removeBook(index) {
   books.splice(index, 1);
   saveBooks();

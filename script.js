@@ -9,7 +9,7 @@ function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function createBookItem(book, index) {
+function createBookItem(book) {
   const bookItem = document.createElement('div');
   bookItem.classList.add('book-item');
 
@@ -32,10 +32,6 @@ function updateBookListDisplay() {
     const bookItem = createBookItem(book, index);
     bookList.appendChild(bookItem);
   });
-}
-
-function displayBooks() {
-  updateBookListDisplay();
 }
 
 function removeBook(index) {

@@ -6,13 +6,13 @@ const bookList = document.getElementById('bookList');
 const books = JSON.parse(localStorage.getItem('books')) || [];
 
 function saveBooks() {
-		localStorage.setItem('books', JSON.stringify(books));
+  localStorage.setItem('books', JSON.stringify(books));
 }
 
 function displayBooks() {
-		bookList.innerHTML = '';
+  bookList.innerHTML = '';
 		books.forEach((book, index) => {
-				const bookItem = document.createElement('div');
+      const bookItem = document.createElement('div');
 				bookItem.classList.add('book-item');
 
 				const bookTitle = document.createElement('div');
@@ -26,27 +26,26 @@ function displayBooks() {
 				removeButton.addEventListener('click', () => removeBook(index));
 				bookItem.appendChild(removeButton);
 				bookList.appendChild(bookItem);
-		});
+    });
 }
 
 addButton.addEventListener('click', () => {
-		const title = titleInput.value;
+  const title = titleInput.value;
 		const author = authorInput.value;
 		if (title && author) {
-				books.push({
-					title,
-					author
-				});
-				saveBooks();
-				displayBooks();
-				titleInput.value = '';
-				authorInput.value = '';
-		}
+      books.push({
+        title,
+        author
+      });
+      saveBooks();
+      displayBooks();
+      titleInput.value = '';
+      authorInput.value = '';
+    }
 });
 
-
 function removeBook(index) {
-		books.splice(index, 1);
+  books.splice(index, 1);
 		saveBooks();
 		displayBooks();
 }

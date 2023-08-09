@@ -1,8 +1,3 @@
-const titleInput = document.getElementById('titleInput');
-const authorInput = document.getElementById('authorInput');
-const addButton = document.getElementById('addButton');
-const bookList = document.getElementById('bookList');
-
 const books = JSON.parse(localStorage.getItem('books')) || [];
 
 function saveBooks() {
@@ -40,13 +35,6 @@ function removeBook(index) {
   updateBookListDisplay();
 }
 
-function setupRemoveButtonListeners() {
-  const removeButtons = document.querySelectorAll('.remove-button');
-  removeButtons.forEach((button, index) => {
-    button.addEventListener('click', () => removeBook(index));
-  });
-}
-
 addButton.addEventListener('click', () => {
   const title = titleInput.value;
   const author = authorInput.value;
@@ -63,4 +51,11 @@ addButton.addEventListener('click', () => {
 });
 
 updateBookListDisplay();
-setupRemoveButtonListeners();
+
+bookList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-button')) {
+    const bookItem = event.target.closest('.book-item');
+    const index = Array.from(bookList.children).indexOf(bookItem);
+    removeBook(index);
+  }
+});

@@ -1,4 +1,4 @@
-const titleInput = document.getElementById('titleInput')
+const titleInput = document.getElementById('titleInput');
 const authorInput = document.getElementById('authorInput');
 const addButton = document.getElementById('addButton');
 const bookList = document.getElementById('bookList');
@@ -8,18 +8,16 @@ const books = JSON.parse(localStorage.getItem('books')) || [];
 addButton.addEventListener('click', () => {
         const title = titleInput.value;
         const author = authorInput.value;
-        if (title && author) {
-                books.push({
-                        title,
-                        author
-                });
+  if (title && author) {
+    books.push({
+      title,
+      author
+    });
                 saveBooks();
                 displayBooks();
                 titleInput.value = '';
                 authorInput.value = '';
-        } else {
-                alert('Please enter both title and author.');
-        }
+}
 });
 
 function saveBooks() {

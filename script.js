@@ -12,19 +12,7 @@ function saveBooks() {
 function displayBooks() {
   bookList.innerHTML = '';
   books.forEach((book, index) => {
-    const bookItem = document.createElement('div');
-    bookItem.classList.add('book-item');
-    
-    const bookTitle = document.createElement('div');
-    bookTitle.classList.add('book-title');
-    bookTitle.textContent = `${book.title} by ${book.author}`;
-    bookItem.appendChild(bookTitle);
-    
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove';
-    removeButton.classList.add('remove-button');
-    removeButton.addEventListener('click', () => removeBook(index));
-    bookItem.appendChild(removeButton);
+    const bookItem = createBookItem(book, index);
     bookList.appendChild(bookItem);
   });
 }
@@ -33,6 +21,24 @@ function removeBook(index) {
   books.splice(index, 1);
   saveBooks();
   displayBooks();
+}
+
+function createBookItem(book, index) {
+  const bookItem = document.createElement('div');
+  bookItem.classList.add('book-item');
+
+  const bookTitle = document.createElement('div');
+  bookTitle.classList.add('book-title');
+  bookTitle.textContent = `${book.title} by ${book.author}`;
+  bookItem.appendChild(bookTitle);
+
+  const removeButton = document.createElement('button');
+  removeButton.textContent = 'Remove';
+  removeButton.classList.add('remove-button');
+  removeButton.addEventListener('click', () => removeBook(index));
+  bookItem.appendChild(removeButton);
+
+  return bookItem;
 }
 
 addButton.addEventListener('click', () => {

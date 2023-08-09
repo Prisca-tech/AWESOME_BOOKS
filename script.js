@@ -12,7 +12,7 @@ function saveBooks() {
 function removeBook(index) {
   books.splice(index, 1);
   saveBooks();
-  ßdisplayBooks();
+  displayBooks();
 }
 
 function displayBooks() {
@@ -37,8 +37,8 @@ function displayBooks() {
 
 addButton.addEventListener('click', () => {
   const title = titleInput.value;
-	const author = authorInput.value;
-	if (title && author) {
+  const author = authorInput.value;
+  if (title && author) {
     books.push({
       title,
       author,
@@ -49,6 +49,5 @@ addButton.addEventListener('click', () => {
     authorInput.value = '';
   }
 });
-
 
 displayBooks();

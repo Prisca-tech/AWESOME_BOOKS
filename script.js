@@ -5,49 +5,50 @@ const bookList = document.getElementById('bookList');
 
 const books = JSON.parse(localStorage.getItem('books')) || [];
 
-addButton.addEventListener('click', () => {
-        const title = titleInput.value;
-        const author = authorInput.value;
-  if (title && author) {
-    books.push({
-      title,
-      author
-    });
-                saveBooks();
-                displayBooks();
-                titleInput.value = '';
-                authorInput.value = '';
-}
-});
-
 function saveBooks() {
-        localStorage.setItem('books', JSON.stringify(books));
+		localStorage.setItem('books', JSON.stringify(books));
 }
 
 function displayBooks() {
-        bookList.innerHTML = '';
-        books.forEach((book, index) => {
-                const bookItem = document.createElement('div');
-                bookItem.classList.add('book-item');
+		bookList.innerHTML = '';
+		books.forEach((book, index) => {
+				const bookItem = document.createElement('div');
+				bookItem.classList.add('book-item');
 
-                const bookTitle = document.createElement('div');
-                bookTitle.classList.add('book-title');
-                bookTitle.textContent = `${book.title} by ${book.author}`;
-                bookItem.appendChild(bookTitle);
+				const bookTitle = document.createElement('div');
+				bookTitle.classList.add('book-title');
+				bookTitle.textContent = `${book.title} by ${book.author}`;
+				bookItem.appendChild(bookTitle);
 
-                const removeButton = document.createElement('button');
-                removeButton.textContent = 'Remove';
-                removeButton.classList.add('remove-button');
-                removeButton.addEventListener('click', () => removeBook(index));
-                bookItem.appendChild(removeButton);
-                bookList.appendChild(bookItem);
-        });
+				const removeButton = document.createElement('button');
+				removeButton.textContent = 'Remove';
+				removeButton.classList.add('remove-button');
+				removeButton.addEventListener('click', () => removeBook(index));
+				bookItem.appendChild(removeButton);
+				bookList.appendChild(bookItem);
+		});
 }
 
+addButton.addEventListener('click', () => {
+		const title = titleInput.value;
+		const author = authorInput.value;
+		if (title && author) {
+				books.push({
+					title,
+					author
+				});
+				saveBooks();
+				displayBooks();
+				titleInput.value = '';
+				authorInput.value = '';
+		}
+});
+
+
 function removeBook(index) {
-        books.splice(index, 1);
-        saveBooks();
-        displayBooks();
+		books.splice(index, 1);
+		saveBooks();
+		displayBooks();
 }
 
 displayBooks();

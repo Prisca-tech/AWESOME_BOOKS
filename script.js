@@ -1,22 +1,21 @@
+const titleInput = document.getElementById('titleInput');
+const authorInput = document.getElementById('authorInput');
+const addButton = document.getElementById('addButton');
+const bookList = document.getElementById('bookList');
+
 const books = JSON.parse(localStorage.getItem('books')) || [];
 
 function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function createBookItem(book) {
-  const bookItem = document.createElement('div');
-  bookItem.classList.add('book-item');
-
-  const bookTitle = document.createElement('div');
-  bookTitle.classList.add('book-title');
-  bookTitle.textContent = `${book.title} by ${book.author}`;
-  bookItem.appendChild(bookTitle);
-
-  const removeButton = document.createElement('button');
-  removeButton.textContent = 'Remove';
-  removeButton.classList.add('remove-button');
-  bookItem.appendChild(removeButton);
+function createBookItem(book, index) {
+  const bookItem = `
+    <div class="book-item">
+      <div class="book-title">${book.title} by ${book.author}</div>
+      <button class="remove-button" data-index="${index}">Remove</button>
+    </div>
+  `;
 
   return bookItem;
 }
@@ -25,8 +24,12 @@ function updateBookListDisplay() {
   bookList.innerHTML = '';
   books.forEach((book, index) => {
     const bookItem = createBookItem(book, index);
-    bookList.appendChild(bookItem);
+    bookList.insertAdjacentHTML('beforeend', bookItem);
   });
+}
+
+function displayBooks() {
+  updateBookListDisplay();
 }
 
 function removeBook(index) {
@@ -54,8 +57,7 @@ updateBookListDisplay();
 
 bookList.addEventListener('click', (event) => {
   if (event.target.classList.contains('remove-button')) {
-    const bookItem = event.target.closest('.book-item');
-    const index = Array.from(bookList.children).indexOf(bookItem);
+    const index = event.target.getAttribute('data-index');
     removeBook(index);
   }
 });

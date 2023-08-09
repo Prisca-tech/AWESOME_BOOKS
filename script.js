@@ -9,22 +9,28 @@ function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
+function removeBook(index) {
+  books.splice(index, 1);
+  saveBooks();
+  ßdisplayBooks();
+}
+
 function displayBooks() {
   bookList.innerHTML = '';
   books.forEach((book, index) => {
     const bookItem = document.createElement('div');
     bookItem.classList.add('book-item');
 
-		const bookTitle = document.createElement('div');
-		bookTitle.classList.add('book-title');
-		bookTitle.textContent = `${book.title} by ${book.author}`;
-		bookItem.appendChild(bookTitle);
+    const bookTitle = document.createElement('div');
+    bookTitle.classList.add('book-title');
+    bookTitle.textContent = `${book.title} by ${book.author}`;
+    bookItem.appendChild(bookTitle);
 
-		const removeButton = document.createElement('button');
-		removeButton.textContent = 'Remove';
-		removeButton.classList.add('remove-button');
-		removeButton.addEventListener('click', () => removeBook(index));
-		bookItem.appendChild(removeButton);
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.classList.add('remove-button');
+    removeButton.addEventListener('click', () => removeBook(index));
+    bookItem.appendChild(removeButton);
     bookList.appendChild(bookItem);
   });
 }
@@ -44,10 +50,5 @@ addButton.addEventListener('click', () => {
   }
 });
 
-function removeBook(index) {
-  books.splice(index, 1);
-		saveBooks();
-		displayBooks();
-}
 
 displayBooks();

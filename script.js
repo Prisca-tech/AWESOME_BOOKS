@@ -9,20 +9,6 @@ function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function displayBooks() {
-  bookList.innerHTML = '';
-  books.forEach((book, index) => {
-    const bookItem = createBookItem(book, index);
-    bookList.appendChild(bookItem);
-  });
-}
-
-function removeBook(index) {
-  books.splice(index, 1);
-  saveBooks();
-  displayBooks();
-}
-
 function createBookItem(book, index) {
   const bookItem = document.createElement('div');
   bookItem.classList.add('book-item');
@@ -35,10 +21,34 @@ function createBookItem(book, index) {
   const removeButton = document.createElement('button');
   removeButton.textContent = 'Remove';
   removeButton.classList.add('remove-button');
-  removeButton.addEventListener('click', () => removeBook(index));
   bookItem.appendChild(removeButton);
 
   return bookItem;
+}
+
+function updateBookListDisplay() {
+  bookList.innerHTML = '';
+  books.forEach((book, index) => {
+    const bookItem = createBookItem(book, index);
+    bookList.appendChild(bookItem);
+  });
+}
+
+function displayBooks() {
+  updateBookListDisplay();
+}
+
+function removeBook(index) {
+  books.splice(index, 1);
+  saveBooks();
+  updateBookListDisplay();
+}
+
+function setupRemoveButtonListeners() {
+  const removeButtons = document.querySelectorAll('.remove-button');
+  removeButtons.forEach((button, index) => {
+    button.addEventListener('click', () => removeBook(index));
+  });
 }
 
 addButton.addEventListener('click', () => {
@@ -50,10 +60,11 @@ addButton.addEventListener('click', () => {
       author,
     });
     saveBooks();
-    displayBooks();
+    updateBookListDisplay();
     titleInput.value = '';
     authorInput.value = '';
   }
 });
 
-displayBooks();
+updateBookListDisplay();
+setupRemoveButtonListeners();

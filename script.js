@@ -1,5 +1,8 @@
-const bookList = document.getElementById('bookList');
-const books = JSON.parse(localStorage.getItem('books')) || [];
+if (typeof document !== 'undefined') {
+  const bookList = document.getElementById('bookList');
+  const books = JSON.parse(localStorage.getItem('books')) || [];
+}
+
 
 function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
@@ -51,7 +54,7 @@ if (typeof document !== 'undefined') {
       titleInput.value = '';
       authorInput.value = '';
     }
-});
+  });
 
   updateBookListDisplay();
 
@@ -62,7 +65,3 @@ if (typeof document !== 'undefined') {
     }
   });
 }
-
-
-
-

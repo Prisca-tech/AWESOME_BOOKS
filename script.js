@@ -5,57 +5,57 @@ if (typeof document !== 'undefined') {
   const bookList = document.getElementById('bookList');
 
   const books = JSON.parse(localStorage.getItem('books')) || [];
+}
 
-  function saveBooks() {
-    localStorage.setItem('books', JSON.stringify(books));
-  }
+function saveBooks() {
+  localStorage.setItem('books', JSON.stringify(books));
+}
 
-  function createBookItem(book, index) {
-    const bookItem = `
-      <div class="book-item">
-        <div class="book-title">${book.title} by ${book.author}</div>
-        <button class="remove-button" data-index="${index}">Remove</button>
-      </div>
-    `;
+function createBookItem(book, index) {
+  const bookItem = `
+    <div class="book-item">
+      <div class="book-title">${book.title} by ${book.author}</div>
+      <button class="remove-button" data-index="${index}">Remove</button>
+    </div>
+  `;
 
-    return bookItem;
-  }
+  return bookItem;
+}
 
-  function updateBookListDisplay() {
-    bookList.innerHTML = '';
-    books.forEach((book, index) => {
-      const bookItem = createBookItem(book, index);
-      bookList.insertAdjacentHTML('beforeend', bookItem);
-    });
-  }
-
-  function removeBook(index) {
-    books.splice(index, 1);
-    saveBooks();
-    updateBookListDisplay();
-  }
-
-  addButton.addEventListener('click', () => {
-    const title = titleInput.value;
-    const author = authorInput.value;
-    if (title && author) {
-      books.push({
-        title,
-        author,
-      });
-      saveBooks();
-      updateBookListDisplay();
-      titleInput.value = '';
-      authorInput.value = '';
-    }
-  });
-
-  updateBookListDisplay();
-
-  bookList.addEventListener('click', (event) => {
-    if (event.target.classList.contains('remove-button')) {
-      const index = event.target.getAttribute('data-index');
-      removeBook(index);
-    }
+function updateBookListDisplay() {
+  bookList.innerHTML = '';
+  books.forEach((book, index) => {
+    const bookItem = createBookItem(book, index);
+    bookList.insertAdjacentHTML('beforeend', bookItem);
   });
 }
+
+function removeBook(index) {
+  books.splice(index, 1);
+  saveBooks();
+  updateBookListDisplay();
+}
+
+addButton.addEventListener('click', () => {
+  const title = titleInput.value;
+  const author = authorInput.value;
+  if (title && author) {
+    books.push({
+      title,
+      author,
+    });
+    saveBooks();
+    updateBookListDisplay();
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+});
+
+updateBookListDisplay();
+
+bookList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-button')) {
+    const index = event.target.getAttribute('data-index');
+    removeBook(index);
+  }
+});

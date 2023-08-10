@@ -29,6 +29,10 @@ This project is to test our ability to store data and delete them, to make a lis
 ## Author 2
 👤 **Christian Nualart**
 
+- GitHub: [@Prisca-tech](https://github.com/cnualartc)
+- Twitter: [@preateamie](https://twitter.com/nualart)
+- LinkedIn: [PriscillaOkoro](www.linkedin.com/in/cnualart)
+
 
 ## 🤝 Contributing
 

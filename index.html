@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Awesome Books</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Awesome Books</h1>
-      <div id="bookList"></div>
-      <div>
-        <input minlength="3" type="text" id="titleInput" placeholder="Title" />
-        <input
-          minlength="3"
-          type="text"
-          id="authorInput"
-          placeholder="Author"
-        />
-        <button id="addButton" type="button">Add</button>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Awesome Books</h1>
+
+  <div class="books-container">
+
+  </div>
+  <form>
+    <div>
+      <input name="name" class="name" id="name" type="text" placeholder="Title">
     </div>
-    <script src="script.js" defer></script> 
-  </body>
+    <div>
+      <input name="author" class="author" id="author" type="text" placeholder="Author">
+    </div>
+    <div>
+      <input type="submit" class="add-book" value="submit">
+    </div>
+  </form>
+
+</body>
 </html>
+<script src="app.js"></script>

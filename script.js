@@ -1,13 +1,11 @@
-
-
-if (typeof document !== 'undefined') {
+if (document !== 'undefined') {
   const titleInput = document.getElementById('titleInput');
   const authorInput = document.getElementById('authorInput');
   const addButton = document.getElementById('addButton');
   const bookList = document.getElementById('bookList');
-
+  
   const books = JSON.parse(localStorage.getItem('books')) || [];
-
+  
   function saveBooks() {
     localStorage.setItem('books', JSON.stringify(books));
   }
@@ -35,7 +33,8 @@ if (typeof document !== 'undefined') {
     books.splice(index, 1);
     saveBooks();
     updateBookListDisplay();
-
+  }
+  
   addButton.addEventListener('click', () => {
     const title = titleInput.value;
     const author = authorInput.value;
@@ -50,9 +49,9 @@ if (typeof document !== 'undefined') {
       authorInput.value = '';
     }
   });
-
+  
   updateBookListDisplay();
-
+  
   bookList.addEventListener('click', (event) => {
     if (event.target.classList.contains('remove-button')) {
       const index = event.target.getAttribute('data-index');

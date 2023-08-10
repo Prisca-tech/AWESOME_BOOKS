@@ -1,3 +1,6 @@
+const bookList = document.getElementById('bookList');
+const books = JSON.parse(localStorage.getItem('books')) || [];
+
 function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
 }
@@ -31,33 +34,33 @@ if (typeof document !== 'undefined') {
   const titleInput = document.getElementById('titleInput');
   const authorInput = document.getElementById('authorInput');
   const addButton = document.getElementById('addButton');
-  const bookList = document.getElementById('bookList');
+  //const bookList = document.getElementById('bookList');
 
-  const books = JSON.parse(localStorage.getItem('books')) || [];
+  //const books = JSON.parse(localStorage.getItem('books')) || [];
 
-addButton.addEventListener('click', () => {
-  const title = titleInput.value;
-  const author = authorInput.value;
-  if (title && author) {
-    books.push({
-      title,
-      author,
-    });
-    saveBooks();
-    updateBookListDisplay();
-    titleInput.value = '';
-    authorInput.value = '';
-  }
+  addButton.addEventListener('click', () => {
+    const title = titleInput.value;
+    const author = authorInput.value;
+    if (title && author) {
+      books.push({
+        title,
+        author,
+      });
+      saveBooks();
+      updateBookListDisplay();
+      titleInput.value = '';
+      authorInput.value = '';
+    }
 });
 
-updateBookListDisplay();
+  updateBookListDisplay();
 
-bookList.addEventListener('click', (event) => {
-  if (event.target.classList.contains('remove-button')) {
-    const index = event.target.getAttribute('data-index');
-    removeBook(index);
-  }
-});
+  bookList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove-button')) {
+      const index = event.target.getAttribute('data-index');
+      removeBook(index);
+    }
+  });
 }
 
 

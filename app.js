@@ -25,7 +25,6 @@ const btnSubmit = document.querySelector('.add-book');
 const BookName = document.querySelector('.name');
 const BookAuthor = document.querySelector('.author');
 
-// ADD Book Funciton
 function addBook() {
   const book = {
     id: books.length,
@@ -37,7 +36,6 @@ function addBook() {
 }
 btnSubmit.addEventListener('click', addBook);
 
-// eslint-disable-next-line no-unused-vars
 function removeBook(id) {
   books = books.filter((item) => item.id !== id);
   localStorage.setItem('Books', JSON.stringify(books));

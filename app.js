@@ -36,6 +36,7 @@ function addBook() {
 }
 btnSubmit.addEventListener('click', addBook);
 
+// eslint-disable-next-line no-unused-vars
 function removeBook(id) {
   books = books.filter((item) => item.id !== id);
   localStorage.setItem('Books', JSON.stringify(books));

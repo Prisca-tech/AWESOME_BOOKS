@@ -128,9 +128,9 @@ Example command:
 ## Author 2
 👤 **Christian Nualart**
 
-- GitHub: [@Prisca-tech](https://github.com/cnualartc)
-- Twitter: [@preateamie](https://twitter.com/nualart)
-- LinkedIn: [PriscillaOkoro](www.linkedin.com/in/cnualart)
+- GitHub: [@cnualartc](https://github.com/cnualartc)
+- Twitter: [@nualart](https://twitter.com/nualart)
+- LinkedIn: [cnualart](www.linkedin.com/in/cnualart)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

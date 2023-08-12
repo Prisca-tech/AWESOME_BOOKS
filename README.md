@@ -11,9 +11,9 @@
 <a name="javaScript"></a>
 
 ### Tech Stack 
-<a name="javaScript"></a>
-<a name="CSS"></a>
 <a name="HTML"></a>
+<a name="CSS"></a>
+<a name="javaScript"></a>
 
 <!-- Features -->
 
@@ -21,7 +21,7 @@
 
 - **[An addbook feature]**
 - **[A deletebook feature]**
--**[fully functional website]**
+- **[fully functional website]**
 - **[time and date]**
 - **[contact info]**
 

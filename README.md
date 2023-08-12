@@ -1,22 +1,77 @@
-# AWESOME_BOOKS
-"Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list.
-
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-This project is to test our ability to store data and delete them, to make a list, display the list of items and also delete them.
-
-## Built With
-
-- HTML
-- CSS
-- javascript
+<a name="awesome books"></a>
 
 
-## Live Demo
-[Live Demo Link]()
+# 📖 [# AWESOME_BOOKS] <a name="'Awesome books' is a simple website that displays a list of books and allows you to add and remove books from that list."></a>
 
-## Live Video
-[Video Link]
+**[Awesome Books]** is a project to test our ability to store data and delete them, to make a list, display the list of items and also delete them.
+
+
+## 🛠 Built With
+<a name="html"></a>
+<a name="css"></a>
+<a name="javaScript"></a>
+
+### Tech Stack <a name="javaScript"></a>
+
+> JavaScript adds functionality to the app, it enables users to add and delete at will
+
+<details>
+  <summary>javaScript</summary>
+  <ul>
+    <li><a href="https://prisca-tech.github.io/AWESOME_BOOKS/">app.js</a></li>
+  </ul>
+
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **[An addbook feature]**
+- **[A deletebook feature]**
+
+<p align="right">(<a href="#awesome books">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="https://prisca-tech.github.io/AWESOME_BOOKS/"></a>
+
+
+- [Live Demo Link](https://prisca-tech.github.io/AWESOME_BOOKS/)
+
+<p align="right">(<a href="#awesome books">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> web browser
+
+
+### Prerequisites
+
+In order to run this project you need:
+
+web browser
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  git clone git@github.com:https://github.com/Prisca-tech/AWESOME_BOOKS.git
+```
+
+### Deployment
+
+You can deploy this project using:
+
+git pages
+
+<p align="right">(<a href="#awesome books">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
 
 
 ## Author 1
@@ -33,16 +88,58 @@ This project is to test our ability to store data and delete them, to make a lis
 - Twitter: [@preateamie](https://twitter.com/nualart)
 - LinkedIn: [PriscillaOkoro](www.linkedin.com/in/cnualart)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🤝 Contributing
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[fully functional website]**
+- [ ] **[time and date]**
+
+<p align="right">(<a href="#awesome books">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-## Show your support
+Feel free to check the [issues page](https://github.com/Prisca-tech/AWESOME_BOOKS/issues).
 
-Give a ⭐️ if you like this project!
+<p align="right">(<a href="#awesome books">back to top</a>)</p>
 
-## Acknowledgments
-## 📝 License
+<!-- SUPPORT -->
 
-This project is [MIT](./MIT.md) licensed.
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please visit the repository and give it a star ⭐️ 
+
+<p align="right">(<a href="#awesome_books">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+I would like to thank my partner for working tirelessly on this project
+
+<p align="right">(<a href="#awesome books">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+

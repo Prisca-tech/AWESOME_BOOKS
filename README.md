@@ -1,5 +1,4 @@
-<a name="awesome books"></a>
-
+# 📗 Table of Contents
 
 # 📖 [# AWESOME_BOOKS] <a name="'Awesome books' is a simple website that displays a list of books and allows you to add and remove books from that list."></a>
 
@@ -11,16 +10,10 @@
 <a name="css"></a>
 <a name="javaScript"></a>
 
-### Tech Stack <a name="javaScript"></a>
-
-> JavaScript adds functionality to the app, it enables users to add and delete at will
-
-<details>
-  <summary>javaScript</summary>
-  <ul>
-    <li><a href="https://prisca-tech.github.io/AWESOME_BOOKS/">app.js</a></li>
-  </ul>
-
+### Tech Stack 
+<a name="javaScript"></a>
+<a name="css"></a>
+<a name="html"></a>
 
 <!-- Features -->
 
@@ -31,14 +24,6 @@
 
 <p align="right">(<a href="#awesome books">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="https://prisca-tech.github.io/AWESOME_BOOKS/"></a>
-
-
-- [Live Demo Link](https://prisca-tech.github.io/AWESOME_BOOKS/)
-
-<p align="right">(<a href="#awesome books">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -96,6 +81,8 @@ git pages
 
 - [ ] **[fully functional website]**
 - [ ] **[time and date]**
+- [ ] **[time and date]**
+
 
 <p align="right">(<a href="#awesome books">back to top</a>)</p>
 

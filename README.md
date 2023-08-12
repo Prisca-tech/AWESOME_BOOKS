@@ -21,7 +21,7 @@
 
 - **[An addbook feature]**
 - **[A deletebook feature]**
-- **[fully functional website]**
+- **[A fully functional website]**
 - **[time and date]**
 - **[contact info]**
 

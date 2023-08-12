@@ -12,8 +12,8 @@
 
 ### Tech Stack 
 <a name="javaScript"></a>
-<a name="css"></a>
-<a name="html"></a>
+<a name="CSS"></a>
+<a name="HTML"></a>
 
 <!-- Features -->
 
@@ -21,6 +21,9 @@
 
 - **[An addbook feature]**
 - **[A deletebook feature]**
+-**[fully functional website]**
+- **[time and date]**
+- **[contact info]**
 
 <p align="right">(<a href="#awesome books">back to top</a>)</p>
 
@@ -75,14 +78,6 @@ git pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[fully functional website]**
-- [ ] **[time and date]**
-- [ ] **[contact info]**
-
 
 <p align="right">(<a href="#awesome books">back to top</a>)</p>
 
@@ -112,8 +107,6 @@ If you like this project please visit the repository and give it a star ⭐️
 I would like to thank my partner for working tirelessly on this project
 
 <p align="right">(<a href="#awesome books">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
 
 
 <!-- LICENSE -->

@@ -81,7 +81,7 @@ git pages
 
 - [ ] **[fully functional website]**
 - [ ] **[time and date]**
-- [ ] **[time and date]**
+- [ ] **[contact info]**
 
 
 <p align="right">(<a href="#awesome books">back to top</a>)</p>
@@ -115,7 +115,6 @@ I would like to thank my partner for working tirelessly on this project
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
 <!-- LICENSE -->
 
